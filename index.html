@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Visual Studio Code Guide</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="container">
+            <div id="navigation">
+                <nav id="navbar">
+                    <header class="nav-header">
+                        <h1>
+                            Bootstrap Documentation
+                        </h1> 
+                    </header>
+                    <a class="nav-link" href="#Introduction">Introduction</a>
+                    <a class="nav-link" href="#Quick_Start">Quick Start</a>
+                    <a class="nav-link" href="#CSS">CSS</a>
+                    <a class="nav-link" href="#JS">JS</a>
+                    <a class="nav-link" href="#Important_Globals">Important Globals</a>
+                    <a class="nav-link" href="#HTML5_doctype">HTML5 doctype</a>
+                    <a class="nav-link" href="#Responsive_meta_tag">Responsive meta tag</a>
+                    <a class="nav-link" href="#Box-sizing">Box-sizing</a>
+                    <a class="nav-link" href="#Reboot">Reboot</a>
+                    <a class="nav-link" href="#Community">Community</a>
+                </nav>
+            </div>
+            <div id="content">
+                <main id="main-doc">
+                    <section id="Introduction" class="main-section">
+                        <header class="section-header">
+                            <h2>Introduction</h2>
+                        </header>
+                        <p>Get started with Bootstrap, the world’s most popular framework for building responsive, mobile-first sites, with BootstrapCDN and a template starter page.</p>
+                    </section>
+                    <section id="Quick_Start" class="main-section">
+                        <header class="section-header">
+                            <h2>Quick Start</h2>
+                        </header>
+                        <p>Looking to quickly add Bootstrap to your project? Use BootstrapCDN, provided for free by the folks at StackPath. Using a package manager or need to download the source files? <a href="https://getbootstrap.com/docs/4.1/getting-started/download/">Head to the downloads page.</a></p>
+                    </section>
+                    <section id="CSS" class="main-section">
+                        <header class="section-header">
+                            <h2>CSS</h2>
+                        </header>
+                        <p>Copy-paste the stylesheet <code>&ltlink&gt</code> into your <code>&lthead&gt</code> before all other stylesheets to load our CSS.</p>
+                    </section>
+                    <section id="JS" class="main-section">
+                        <header class="section-header">
+                            <h2>JS</h2>
+                        </header>
+                        <p>Many of our components require the use of JavaScript to function. Specifically, they require <a href="https://jquery.com/">jQuery</a>, <a href="https://popper.js.org/">Popper.js</a>, and our own JavaScript plugins. Place the following <code>&ltscript&gt</code>s near the end of your pages, right before the closing <code>&lt/body&gt</code> tag, to enable them. jQuery must come first, then Popper.js, and then our JavaScript plugins.</p>
+                        <p>We use <a href="https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/">jQuery’s slim build</a>, but the full version is also supported.</p>
+                    </section>
+                    <section id="Important_Globals" class="main-section">
+                        <header class="section-header">
+                            <h2>Important Globals</h2>
+                        </header>
+                        <p>Bootstrap employs a handful of important global styles and settings that you’ll need to be aware of when using it, all of which are almost exclusively geared towards the <em>normalization</em> of cross browser styles. Let’s dive in.</p>
+                    </section>
+                    <section id="HTML5_doctype" class="main-section">
+                        <header class="section-header">
+                            <h2>HTML5 doctype</h2>
+                        </header>
+                        <p>Bootstrap requires the use of the HTML5 doctype. Without it, you’ll see some funky incomplete styling, but including it shouldn’t cause any considerable hiccups.</p>
+                        <pre>
+                            <code>
+                                &lt!doctype html&gt
+                                &lthtml lang="en"&gt
+                                    ...
+                                &lt/html&gt
+                            </code>
+                        </pre>
+                    </section>
+                    <section id="Responsive_meta_tag" class="main-section">
+                        <header class="section-header">
+                            <h2>Responsive meta tag</h2>
+                        </header>
+                        <p>Bootstrap is developed mobile first, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, <strong>add the responsive viewport meta tag</strong> to your &lthead&gt.</p>
+                        <p><code>&ltmeta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt</code></p>
+                        <p>You can see an example of this in action in the <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/#starter-template">starter template</a>.</p>
+                    </section>
+                    <section id="Box-sizing" class="main-section">
+                        <header class="section-header">
+                            <h2>Box-sizing</h2>
+                        </header>
+                        <p>For more straightforward sizing in CSS, we switch the global box-sizing value from content-box to border-box. This ensures padding does not affect the final computed width of an element, but it can cause problems with some third party software like Google Maps and Google Custom Search Engine.</p>
+                        <p>On the rare occasion you need to override it, use something like the following:</p>
+                        <pre>
+                            <code>
+                                .selector-for-some-widget {
+                                    box-sizing: content-box;
+                                }
+                            </code>
+                        </pre>
+                        <p>With the above snippet, nested elements—including generated content via ::before and ::after—will all inherit the specified box-sizing for that .selector-for-some-widget.</p>
+                        <p>Learn more about <a href="https://css-tricks.com/box-sizing/">box model and sizing at CSS Tricks</a>.</p>
+                    </section>
+                    <section id="Reboot" class="main-section">
+                        <header class="section-header">
+                            <h2>Reboot</h2>
+                        </header>
+                        <p>For improved cross-browser rendering, we use <a href="https://getbootstrap.com/docs/4.1/content/reboot/">Reboot</a> to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.</p>
+                    </section>
+                    <section id="Community" class="main-section">
+                        <header class="section-header">
+                            <h2>Community</h2>
+                        </header>
+                        <p>Stay up to date on the development of Bootstrap and reach out to the community with these helpful resources.</p>
+                        <ul>
+                            <li>Follow <a href="https://twitter.com/getbootstrap">@getbootstrap on Twitter</a>.</li>
+                            <li>Read and subscribe to <a href="https://blog.getbootstrap.com/">The Official Bootstrap Blog</a>.</li>
+                            <li>Join <a href="https://bootstrap-slack.herokuapp.com/">the official Slack room</a>.</li>
+                            <li>Chat with fellow Bootstrappers in IRC. On the <code>irc.freenode.net</code> server, in the <code>##bootstrap</code> channel.</li>
+                            <li>Implementation help may be found at Stack Overflow (tagged <a href="https://stackoverflow.com/questions/tagged/bootstrap-4">bootstrap-4</a>).</li>
+                            <li>Developers should use the keyword <code>bootstrap</code> on packages which modify or add to the functionality of Bootstrap when distributing through <a href="https://www.npmjs.com/search?q=keywords:bootstrap">npm</a> or similar delivery mechanisms for maximum discoverability.</li>
+                        </ul>
+                        <p>You can also follow <a href="https://twitter.com/getbootstrap">@getbootstrap on Twitter</a> for the latest gossip and awesome music videos.</p>
+                    </section>
+                </main>
+            </div>
+        </div>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+</html>
